@@ -19,24 +19,11 @@
 // };
 
 var BlinkyDancer = function (top, left, timeBetweenSteps) {
-  Dancer.apply(this, arguments);
-  // Dancer.call (this);
-  // this.top = top;
-  // this.left = left;
+  Dancer.call(this, top, left, timeBetweenSteps);
+  this.step();
 };
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.constructor = BlinkyDancer;
-
-
-// BlinkyDancer.prototype.step = function (timeBetweenSteps) {
-//   this.$node.toggle();
-//   // this.tick = function (timeBetweenSteps) {
-//   // }
-// }
-
-// BlinkyDancer.prototype.dance = function () {
-//   this.$node.toggle();
-// }
 
 BlinkyDancer.prototype.step = function () {
   Dancer.prototype.step.call(this);

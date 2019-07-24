@@ -22,12 +22,20 @@ $(document).ready(function() {
 
     // make a dancer with a random position
 
-    var dancer = dancerMakerFunction(
+    var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
     );
+    window.dancers.push(dancer);
     $('body').append(dancer.$node);
+  });
+
+  $('.moveLeftButton').on('click', function(event) {
+      for(var i = 0; i < window.dancers.length; i++){
+        window.dancers[i].moveLeft();
+      }
   });
 });
 
+//iterate through window.dancers[] then push those elements into a new array. then set the position of that new array to the left of the window. (this would be a new method in dancer)

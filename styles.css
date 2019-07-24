@@ -3,7 +3,8 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background: url('discoball.gif') no-repeat center center fixed;
+  background-size: cover;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -13,6 +14,10 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+.moveLeftButton{
+  padding:5px 12px;
+  float:left;
+}
 .topbar{
   height:32px;
   background-color: #555;
@@ -21,7 +26,32 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+  content: url('Dancing\ dog.gif');
+  width: 200px;
+  height: 200px;
   position:absolute;
+}
+.HavingFunHarold{
+  position:absolute;
+  content: url('reactionGif.gif');
+  width: 150px;
+  height: 150px;
+}
+.HavingFunHarold:hover{
+  position:absolute;
+  content: url('giphy.gif');
+  width: 150px;
+  height: 150px;
+}
+.HanDancing{
+  position:absolute;
+  content: url('handancing.gif');
+  width: 200px;
+  height: 320px;
+}
+.Carlton{
+  position:absolute;
+  content: url('dance1.gif');
+  width: 320px;
+  height: 280px;
 }
